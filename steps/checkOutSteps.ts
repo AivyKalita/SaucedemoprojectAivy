@@ -28,13 +28,13 @@ async verifyAddressPage(){
     }*/
 
    async verifyAddressPageFail() {
-  const expectedUrl = 'https://saucedemo.com';
+  const expectedUrl = 'https://saucedemo.com';// to fail this case
   const currentUrl = this.classCheckOutPage.url();
 
   if (currentUrl === expectedUrl) {
     console.log('Success');
   } else {
     console.log('not match');
-    throw new Error(`URL mismatch! Expected: ${expectedUrl}, but got: ${currentUrl}`);
+    throw new Error(`URL mismatch! Expected: ${expectedUrl}, but got: ${currentUrl}`);//Error is an object.  calls the constructor of that built-in Error class and returns a new object instance containing properties like .message, .name, and .stack (the stack trace showing which line failed)
   }
    }};
